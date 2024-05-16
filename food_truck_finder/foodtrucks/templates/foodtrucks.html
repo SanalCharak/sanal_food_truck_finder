@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Location Search</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+.container {
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      overflow-y: auto; /* Add overflow-y for vertical scrolling */
+      max-height: 70vh; /* Limit the max height of the container */
+    }
+
+    ul {
+      margin-top: 20px; /* Add margin to separate from form */
+      padding: 0; /* Remove default padding */
+      list-style-type: none; /* Remove default list style */
+    }
+
+    ul li {
+      margin-bottom: 10px; /* Add margin between list items */
+    }
+
+    h1 {
+      text-align: center;
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+    }
+
+    label {
+      display: block;
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+
+    input[type="text"] {
+      width: 100%;
+      padding: 10px;
+      font-size: 16px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      box-sizing: border-box;
+    }
+
+    input[type="submit"] {
+      width: 100%;
+      padding: 10px;
+      font-size: 16px;
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    input[type="submit"]:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <h1>Enter Latitude and Longitude</h1>
+  <form action="" method="post">
+    {% csrf_token %}
+    <div class="form-group">
+      <label for="latitude">Latitude:</label>
+      <input type="text" id="latitude" name="latitude" placeholder="Enter latitude..." pattern="-?\d+(\.\d+)?" title="Latitude should contain only numbers, periods, and hyphens." required>
+    </div>
+    <div class="form-group">
+      <label for="longitude">Longitude:</label>
+      <input type="text" id="longitude" name="longitude" placeholder="Enter longitude..." pattern="-?\d+(\.\d+)?" title="Longitude should contain only numbers, periods, and hyphens." required>
+    </div>
+    <input type="submit" value="Search">
+  </form>
+        <ul>
+        {% for truck in food_trucks %}
+            <li>
+                <h2>{{ truck.Applicant }}</h2>
+                <p>Location: {{ truck.Location }}</p>
+                <p>Food Items: {{ truck.FoodItems }}</p>
+                <!-- Add more fields as needed -->
+            </li>
+        {% endfor %}
+    </ul>
+</div>
+
+</body>
+</html>
