@@ -8,5 +8,6 @@ def fun():
 
 def fun2():
     bb=200
+    bb=300
     return bb
 
