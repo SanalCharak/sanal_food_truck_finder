@@ -2,4 +2,6 @@ from django.test import TestCase
 
 # Create your tests here.
 
-aa = 7
+def fun():
+    aa=7
+    return aa
