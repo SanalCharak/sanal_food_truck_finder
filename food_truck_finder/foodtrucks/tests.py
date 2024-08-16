@@ -4,6 +4,7 @@ from django.test import TestCase
 
 def fun():
     aa=900
+    aa = 1000
     return aa
 
 def fun2():
