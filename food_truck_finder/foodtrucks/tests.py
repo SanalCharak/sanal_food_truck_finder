@@ -6,7 +6,7 @@ def fun():
     aa=200
     return aa
 
-def fun():
+def fun2():
     bb=2
     return bb
 
