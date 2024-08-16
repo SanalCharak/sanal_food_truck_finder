@@ -3,7 +3,7 @@ from django.test import TestCase
 # Create your tests here.
 
 def fun():
-    aa=800
+    aa=900
     return aa
 
 def fun2():
