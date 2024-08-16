@@ -7,6 +7,6 @@ def fun():
     return aa
 
 def fun2():
-    bb=2
+    bb=200
     return bb
 
