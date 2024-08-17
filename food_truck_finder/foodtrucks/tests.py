@@ -4,5 +4,5 @@ from django.test import TestCase
 
 
 def fun():
-    aa=1
+    aa=2
     return aa
