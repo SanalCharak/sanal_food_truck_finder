@@ -4,3 +4,7 @@ from django.test import TestCase
 
 def fun():
     print("nn")
+
+
+def fun():
+    print("oo")
