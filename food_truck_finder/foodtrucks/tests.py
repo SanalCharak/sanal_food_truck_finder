@@ -5,3 +5,7 @@ from django.test import TestCase
 def fun():
     aa=1
     return aa
+
+def fun():
+    cc=2
+    return cc
