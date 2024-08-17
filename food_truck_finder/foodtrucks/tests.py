@@ -2,6 +2,6 @@ from django.test import TestCase
 
 # Create your tests here.
 
-uu = 1
+uu = 2
 
 ff=1
